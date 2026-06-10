@@ -20,10 +20,11 @@ O modelo foi treinado para reconhecer 52 classes, correspondentes às combinaç�
 
 ## Estrutura do repositório
 
-```text id="w5p8s4"
+```text
 ├── env/
 ├── resultados/
 ├── videos/
+├── evidencias/
 ├── .gitignore
 ├── best.pt
 ├── detectar.py
@@ -35,13 +36,13 @@ O modelo foi treinado para reconhecer 52 classes, correspondentes às combinaç�
 
 Instale as dependências:
 
-```bash id="t8ozqr"
+```bash
 pip install -r requirements.txt
 ```
 
 Execute o script de detecção:
 
-```bash id="erbbtz"
+```bash
 python detectar.py
 ```
 
@@ -49,13 +50,13 @@ Por padrão, o script utiliza os vídeos presentes na pasta `videos/` e salva os
 
 Para testar com outro vídeo, adicione o arquivo desejado na pasta `videos/` e altere no código o caminho da variável `VIDEO_INPUT`. Exemplo:
 
-```python id="tg52vv"
+```python
 VIDEO_INPUT = "videos/meu_video.mp4"
 ```
 
 Após a execução, o vídeo processado será salvo na pasta:
 
-```text id="3y4y2w"
+```text
 resultados/
 ```
 
@@ -67,9 +68,7 @@ Para encerrar a reprodução antes do fim do vídeo, pressione a tecla `Q`.
 
 ## Modelo treinado
 
-O arquivo `best.pt` representa o melhor modelo obtido durante o treinamento com YOLO.
-
-Esse arquivo é carregado pelo script `detectar.py` para detectar cartas nos vídeos informados.
+O arquivo `best.pt` é o modelo usado para detectar cartas nos vídeos.
 
 ## Métricas obtidas
 
@@ -83,3 +82,15 @@ Esse arquivo é carregado pelo script `detectar.py` para detectar cartas nos ví
 ## Resultados
 
 A pasta `resultados/` contém os resultados gerados para cada vídeo de exemplo presente na pasta `videos/`.
+
+## Evidências das Predições
+
+A seguir são apresentados exemplos de detecções realizadas pelo modelo em vídeos reais utilizados durante a validação prática.
+
+### Exemplo 1 – Ás de Espadas e Valete de Copas
+
+![Exemplo 1](evidencias/aceofspades_jhearts.png)
+
+### Exemplo 2 – Rei de Ouros e Dama de Paus
+
+![K de Ouros e Q de Paus](evidencias/K_diamonds%20e%20Q_clubs.png)
