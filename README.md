@@ -1,0 +1,1 @@
+# deteccao-cartas-baralho
